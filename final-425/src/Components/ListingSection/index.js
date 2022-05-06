@@ -1,33 +1,42 @@
-import React from 'react';
+import { React, useMemo, useState } from 'react';
+import axios from 'axios'
 import Icon1 from '../../Images/house1.jpeg';
 import Icon2 from '../../Images/house2.jpeg';
 import Icon3 from '../../Images/house3.jpeg';
-import {ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP} from './listingsectionelements';
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './listingsectionelements';
 
+const icons = [
+    Icon1,
+    Icon2,
+    Icon3,];
 const Listings = () => {
-    return (
+    const [properties, setProperties] = useState()
+    useMemo(() => {
+        const fetchData = async () => {
+            const response = await axios.get("http://localhost:3000/properties")
+            setProperties(response.data)
+        }
+        fetchData();
+    }, [setProperties]);
+    console.log(properties)
+    return properties ? (
         <ServicesContainer>
             <ServicesH1>Current Listings</ServicesH1>
             <ServicesWrapper>
-                <ServicesCard>
-                    <ServicesIcon src={Icon1} />
-                    <ServicesH2>Reduce Costs</ServicesH2>
-                    <ServicesP>We will help to remove skjdfhsfhsjk and increase your overall sdlkfsdjfh.</ServicesP>
-                </ServicesCard>
-                <ServicesCard>
-                    <ServicesIcon src={Icon2} />
-                    <ServicesH2>Ritual Offices</ServicesH2>
-                    <ServicesP>Access our website anywhere in the world.</ServicesP>
-                </ServicesCard>
-                <ServicesCard>
-                    <ServicesIcon src={Icon3} />
-                    <ServicesH2>Premium Benefits</ServicesH2>
-                    <ServicesP>Unlock our special membership safasd that does afsdad.</ServicesP>
-                </ServicesCard>
+                {properties.map((x, index) => {
+                    return (
+                        <ServicesCard
+                            key={index}
+                        >
+                            <ServicesIcon src={icons[index % icons.length]} />
+                            <ServicesH2>{x.proName}</ServicesH2>
+                            <ServicesP>{x.proType}</ServicesP>
+                        </ServicesCard>)
+                })}
             </ServicesWrapper>
         </ServicesContainer>
 
-    )
+    ) : null
 }
 
 

@@ -1,0 +1,49 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model agent {
+  agEmail    String
+  agName     String
+  agMobile   Int
+  agId       Int    @id @default(autoincrement())
+}
+
+model buyers {
+  byrEmail    String
+  byrName     String
+  byrPass     String
+  byrMobile   Int
+  byrId       Int    @id @default(autoincrement())
+}
+
+model login {
+  loginUsername    String
+  loginPassword    String
+  loginId          Int   @id @default(autoincrement())
+}
+
+model property {
+  proName     String
+  proType     String
+  proSlrId    Int?
+  proId       Int    @id @default(autoincrement())
+}
+
+model sellers {
+  slrName     String
+  slrId       Int    @id @default(autoincrement())
+}
+
+model user {
+  userName       String
+  userMobile     String
+  userAddress    String
+  userEmail      Int
+  userId         Int    @id @default(autoincrement())
+}

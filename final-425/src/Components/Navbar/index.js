@@ -31,13 +31,13 @@ const Navbar = ({ toggle }) => {
                     </NavLogo>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="help" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Agents</NavLinks>
+                            <NavLinks to="/agentspage"  duration={500}  exact='true' offset={-80}>Agents</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/listingspage" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Listings</NavLinks>
+                            <NavLinks to="/listingspage"  duration={500} exact='true' offset={-80}>Listings</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/accountedit" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Account</NavLinks>
+                            <NavLinks to="/accountedit"  duration={500} exact='true' offset={-80}>Account</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
