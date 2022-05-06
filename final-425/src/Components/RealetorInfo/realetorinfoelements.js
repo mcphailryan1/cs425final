@@ -50,6 +50,12 @@ export const FormButton = styled(Link)`
   text-align: center;
 `;
 
+export const ServicesIcon = styled.img`
+  height: 160px;
+  width: 160px;
+  margin-bottom: 10px;
+`;
+
 export const FormContent = styled.div`
   height: 100%;
   display: flex;
@@ -62,11 +68,12 @@ export const FormContent = styled.div`
 `;
 
 export const FormH1 = styled.h1`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #fff;
   font-size: 24px;
   font-weight: 400;
   text-align: center;
+  margin-top: 50px;
 `;
 
 export const FormH2 = styled.h2`
@@ -74,20 +81,7 @@ export const FormH2 = styled.h2`
   font-size: 20px;
   font-weightL 400;
   text-align: center;
-`;
-
-export const FormLink = styled(Link)`
-  color: #fff;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.7rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  margin-top: 0px;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
 `;
 
 export const FormInput = styled.input`

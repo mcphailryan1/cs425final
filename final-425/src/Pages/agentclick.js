@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Navbar from '../Components/Navbar';
+import React from 'react';
+import AccountEdit from '../Components/RealetorInfo';
 
-const AccountInfo = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const AgentClickOn = () => {
 
     return (
         <>
@@ -11,4 +10,4 @@ const AccountInfo = () => {
     );
 };
 
-export default AccountInfo;
+export default AgentClickOn;
