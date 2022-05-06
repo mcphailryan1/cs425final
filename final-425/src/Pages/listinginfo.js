@@ -11,7 +11,6 @@ const Listing = () => {
 
     return(
         <>
-            <Navbar />
             <Listings />
         </>
     );

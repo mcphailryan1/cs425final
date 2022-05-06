@@ -2,11 +2,10 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import SignIn from '../Components/Signin';
 
-const SigninPage = () => {
-    return(
+const SigninPage = ({ setSignedIn }) => {
+    return (
         <>
-            <Navbar />
-            <SignIn />
+            <SignIn setSignedIn={setSignedIn} />
         </>
     )
 }

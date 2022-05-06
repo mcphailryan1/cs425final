@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
-import {Nav, NavbarContainer, NavLogo, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements';
+import { Nav, NavbarContainer, NavLogo, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements';
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, isSignedIn }) => {
 
     const [scrollNav, setScrollNav] = useState(false)
 
-    const changeNav = ()=> {
-        if(window.scrollY >= 80) {
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
             setScrollNav(true)
         } else {
             setScrollNav(false)
@@ -22,7 +22,7 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
     }
 
-    return(
+    return (
         <>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
@@ -31,18 +31,17 @@ const Navbar = ({ toggle }) => {
                     </NavLogo>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="/agentspage"  duration={500}  exact='true' offset={-80}>Agents</NavLinks>
+                            <NavLinks to="/agentspage" duration={500} exact='true' offset={-80}>Agents</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/listingspage"  duration={500} exact='true' offset={-80}>Listings</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="/accountedit"  duration={500} exact='true' offset={-80}>Account</NavLinks>
+                            <NavLinks to="/listingspage" duration={500} exact='true' offset={-80}>Listings</NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <NavBtn>
+                    {isSignedIn ? (<NavBtn>
+                        <NavBtnLink to="/accountedit">Account Settings</NavBtnLink>
+                    </NavBtn>) : (<NavBtn>
                         <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                    </NavBtn>
+                    </NavBtn>)}
                 </NavbarContainer>
             </Nav>
         </>

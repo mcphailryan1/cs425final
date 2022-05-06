@@ -29,8 +29,8 @@ const Agents = () => {
                         <ServicesCard
                             key={index}>
                             <ServicesIcon src={icons[index % icons.length]} />
-                            <ServicesH2>{x.byrName}</ServicesH2>
-                            <ServicesP>{x.byrMobile}</ServicesP>
+                            <ServicesH2>{x.agName}</ServicesH2>
+                            <ServicesP>{x.agEmail}</ServicesP>
                         </ServicesCard>)
                 })}
             </ServicesWrapper>

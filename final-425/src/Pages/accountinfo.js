@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AccountEdit from '../Components/AccountEdit';
 import Navbar from '../Components/Navbar';
 
@@ -9,9 +9,8 @@ const AccountInfo = () => {
         setIsOpen(!isOpen)
     };
 
-    return(
+    return (
         <>
-            <Navbar />
             <AccountEdit />
         </>
     );

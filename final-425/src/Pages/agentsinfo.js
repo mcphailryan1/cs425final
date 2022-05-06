@@ -11,7 +11,6 @@ const Agents = () => {
 
     return(
         <>
-            <Navbar />
             <Agent />
         </>
     );
