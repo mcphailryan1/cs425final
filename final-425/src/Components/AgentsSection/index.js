@@ -36,7 +36,7 @@ const Agents = () => {
               <ServicesIcon src={icons[index % icons.length]} />
               <ServicesH2>{x.agName}</ServicesH2>
               <ServicesP>{x.agEmail}</ServicesP>
-              <Icon>Click here for their listing info</Icon>
+              <Icon to='/agentsclick'>Click here for this persons listings info</Icon>
             </ServicesCard>
           );
         })}

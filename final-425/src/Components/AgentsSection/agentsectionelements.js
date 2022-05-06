@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from "react-router-dom";
+import {Link as LinkR} from "react-router-dom";
 
 export const ServicesContainer = styled.div`
   height: 800px;
@@ -16,7 +16,7 @@ export const ServicesContainer = styled.div`
   }
 `;
 
-export const Icon = styled(Link)`
+export const Icon = styled(LinkR)`
   margin-left: 32px;
   margin-top: 32px;
   text-decoration: none;
