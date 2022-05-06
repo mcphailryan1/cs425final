@@ -34,7 +34,7 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesPay = styled(LinkR)`
-  color: #fff;
+  color: #000;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.7rem;

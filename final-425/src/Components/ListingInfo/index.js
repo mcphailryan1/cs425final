@@ -8,9 +8,9 @@ import {
   FormH2,
   FormLabel,
   FormInput,
+  ServicesIcon,
   Text,
 } from "./listinginfoelements";
-import axios from "axios";
 import Icon1 from "../../Images/house1.jpeg";
 
 const ListingExample = () => {
@@ -21,14 +21,14 @@ const ListingExample = () => {
           <FormContent>
             <Form action="#">
               <FormH1>Listing Information:</FormH1>
-              <img>{Icon1}</img>
-              <Text>Address: </Text>
-              <Text>Price: </Text>
+              <ServicesIcon src={Icon1} />
+              <Text>Address: 932 W 18th Street</Text>
+              <Text>Price: 100k</Text>
 
               <FormH2>Make an Offer</FormH2>
-       
+
               <FormLabel htmlFor="for">Your Email</FormLabel>
-              <FormInput type="email"/>
+              <FormInput type="email" />
               <FormLabel htmlFor="for">Card Information:</FormLabel>
               <FormInput type="text" />
               <FormLabel htmlFor="for">Expiration Date:</FormLabel>
@@ -36,7 +36,7 @@ const ListingExample = () => {
               <FormLabel htmlFor="for">CCV:</FormLabel>
               <FormInput type="text" />
               <button>SUBMIT</button>
-             </Form>
+            </Form>
           </FormContent>
         </FormWrap>
       </Container>
