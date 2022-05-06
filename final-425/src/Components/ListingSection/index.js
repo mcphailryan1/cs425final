@@ -3,7 +3,7 @@ import axios from 'axios'
 import Icon1 from '../../Images/house1.jpeg';
 import Icon2 from '../../Images/house2.jpeg';
 import Icon3 from '../../Images/house3.jpeg';
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './listingsectionelements';
+import { ServicesContainer, ServicesPay, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './listingsectionelements';
 
 const icons = [
     Icon1,
@@ -31,6 +31,7 @@ const Listings = () => {
                             <ServicesIcon src={icons[index % icons.length]} />
                             <ServicesH2>{x.proName}</ServicesH2>
                             <ServicesP>{x.proType}</ServicesP>
+                            <ServicesPay to='/listingspay'>Make an offer here!</ServicesPay>
                         </ServicesCard>)
                 })}
             </ServicesWrapper>

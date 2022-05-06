@@ -7,6 +7,7 @@ import Listing from './Pages/listinginfo';
 import Agents from './Pages/agentsinfo'
 import Navbar from './Components/Navbar';
 import { useState, useEffect } from 'react';
+import ListingEx from './Pages/listingexample';
 
 
 const ProtectedRoutes = ({ isSignedIn }) => {
@@ -29,6 +30,7 @@ function App() {
       <Route path="/accountedit" element={<ProtectedRoutes isSignedIn={isSignedIn} />} />
       <Route path='/listingspage' element={<Listing />} />
       <Route path='/agentspage' element={<Agents />} />
+      <Route path='/listingspay' element={<ListingEx />} />
     </Routes>
   </>
   );

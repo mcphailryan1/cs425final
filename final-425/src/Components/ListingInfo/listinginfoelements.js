@@ -76,20 +76,6 @@ export const FormH2 = styled.h2`
   text-align: center;
 `;
 
-export const FormLink = styled(Link)`
-  color: #fff;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.7rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  margin-top: 0px;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-`;
-
 export const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
